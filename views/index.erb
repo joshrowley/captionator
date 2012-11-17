@@ -1,1 +1,14 @@
-  'Hello world!'
+<html>
+<head>
+</head>
+
+<body>
+  <% @messages.each do |message| %>
+    <%= message.content %>
+    <%= message.number %>
+    <%= message.date_created %>
+  <% end %>
+</body>
+
+
+</html>
