@@ -10,7 +10,6 @@ class Message
 
   def self.save_inbound_messages
     messages = TwilioWrapper.new.inbound_messages
-    debugger
     messages.each {|message| create content: message.body, number: message.from, date_created: message.date_created }
   end
 end

@@ -3,11 +3,13 @@
 </head>
 
 <body>
-  <% @messages.each do |message| %>
-    <%= message.content %>
-    <%= message.number %>
-    <%= message.date_created %>
-  <% end %>
+  <ul>
+    <% @messages.each do |message| %>
+      <li><%= message.content %>
+      <%= message.number %>
+      <%= message.date_created %></li>
+    <% end %>
+  </ul>
 </body>
 
 
