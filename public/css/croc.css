@@ -1,0 +1,19 @@
+img#croc {
+  width: 500px;
+}
+
+ul {
+}
+
+.container {
+  width: 500px; 
+  margin: 0 auto;
+}
+
+.message {
+  text-align: center;
+}
+
+#myCarousel {
+  margin-top: 20px;
+}

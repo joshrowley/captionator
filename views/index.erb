@@ -1,16 +1,48 @@
 <html>
 <head>
+  <title>Zara Aina</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="/css/croc.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/croc.js"></script>
 </head>
-
 <body>
-  <ul>
-    <% @messages.each do |message| %>
-      <li><%= message.content %>
-      <%= message.number %>
-      <%= message.date_created %></li>
-    <% end %>
-  </ul>
+
+  <div class="container">
+    <img id="croc" src="/img/croc.jpg" />
+    <br />
+
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <% @messages.each do |message| %>
+          <div class="item"><h1 class="message">
+            <%= message.content %>
+          </h1></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <script>$('.carousel').carousel({interval: 5000})</script>
+
 </body>
 
 
 </html>
+
+<%#= message.number %>
+        <%#= message.date_created %>
+
+
+
+        <div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">…</div>
+    <div class="item">…</div>
+    <div class="item">…</div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
