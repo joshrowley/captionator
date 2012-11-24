@@ -6,7 +6,7 @@ class TwilioWrapper
   end
 
   def inbound_messages
-    messages = client.account.sms.messages.list.select do |sms|
+    messages = client.account.sms.messages.list({:to => '+16463927288'}).select do |sms|
       sms.direction == 'inbound'
     end
   end
