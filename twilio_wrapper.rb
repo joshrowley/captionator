@@ -2,7 +2,7 @@ class TwilioWrapper
   attr_reader :client
 
   def initialize
-    @client = Twilio::REST::Client.new $account_sid, $auth_token
+    @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_ID'], ENV['TWILIO_ACCOUNT_SECRET']
   end
 
   def inbound_messages
