@@ -1,5 +1,5 @@
 require 'rack'
-require './app.rb'
+require './app'
 
 run Sinatra::Application
 $stdout.sync = true
