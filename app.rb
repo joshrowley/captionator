@@ -4,7 +4,7 @@ require 'data_mapper'
 require 'sinatra/reloader'
 require 'twilio-ruby'
 require 'dm-postgres-adapter'
-require './credentials.rb'
+# require './credentials.rb'
 require './twilio_wrapper'
 require './message'
 
