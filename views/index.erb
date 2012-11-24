@@ -15,7 +15,7 @@
 
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
-        <% @messages.each do |message| %>
+        <% @messages.sort_by(&:date_created).reverse.each do |message| %>
           <div class="item"><h1 class="message">
             "<%= message.content %>"
           </h1></div>
