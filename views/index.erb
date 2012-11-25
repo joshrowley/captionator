@@ -16,7 +16,7 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <% @messages.sort_by(&:date_created).reverse.each do |message| %>
-          <div class="item"><h1 class="message">
+          <div class="item" timestamp="<%= message.date_created %>"><h1 class="message">
             "<%= message.content %>"
           </h1></div>
         <% end %>

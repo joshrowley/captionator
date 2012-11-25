@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'data_mapper'
 gem 'twilio-ruby'
 gem 'sinatra-contrib'
+gem 'debugger'
 
 group :development do
   gem 'dm-sqlite-adapter'
