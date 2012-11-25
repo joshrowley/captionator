@@ -30,4 +30,8 @@ get '/update_messages' do
   erb :message
 end
 
+get '/admin' do
+  @messages = Message.all
+  erb :admin
+end
 

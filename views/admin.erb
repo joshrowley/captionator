@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Zara Aina Admin</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>From</th>
+          <th>Sent</th>
+          <th>Content</th>
+          <th>Deleted?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @messages.sort_by(&:date_created).reverse.each do |message| %>
+          <tr>
+            <td><%= message.id %></td>
+            <td><%= message.number %></td>
+            <td><%= message.date_created %></td>
+            <td><%= message.content %></td>
+            <td><%= message.deleted %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </body>
+</html>
