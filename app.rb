@@ -40,7 +40,7 @@ get '/update_messages' do
   # resave messages from twilio
   Message.save_inbound_messages
   # check for new messages since last updated time
-  latest_timestamp = Time.parse(params[:latest_timestamp]).to_datetime
+  latest_timestamp = Time.parse(params[:latest_timestamp]).to_datetime if params[:latest_timestamp]
   @messages = Message.all.select { |message| message.date_created > latest_timestamp }
   erb :message
 end
