@@ -4,6 +4,7 @@
   </head>
   <body>
     <table>
+      <a href="/reset_messages">Reset messages</a>
       <thead>
         <tr>
           <th>Id</th>
@@ -11,6 +12,7 @@
           <th>Sent</th>
           <th>Content</th>
           <th>Deleted?</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -21,6 +23,31 @@
             <td><%= message.date_created %></td>
             <td><%= message.content %></td>
             <td><%= message.deleted %></td>
+            <td><a href="/delete_message/<%= message.id %>">Delete</a></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>From</th>
+          <th>Sent</th>
+          <th>Content</th>
+          <th>Deleted?</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @deleted_messages.sort_by(&:date_created).reverse.each do |message| %>
+          <tr>
+            <td><%= message.id %></td>
+            <td><%= message.number %></td>
+            <td><%= message.date_created %></td>
+            <td><%= message.content %></td>
+            <td><%= message.deleted %></td>
+            <td><a href="/restore_message/<%= message.id %>">Restore</a></td>
           </tr>
         <% end %>
       </tbody>
