@@ -18,5 +18,10 @@ ul {
   margin-top: 20px;
 }
 
-.credit  { position:fixed; bottom:2%; right:2%; text-align: right; }
+.credit  { 
+  position:fixed; 
+  bottom:2%; 
+  right:2%; 
+  text-align: right; 
+}
 .text_info { position:fixed; bottom: 2%; left: 2%;}
