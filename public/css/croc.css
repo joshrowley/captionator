@@ -6,7 +6,8 @@ ul {
 }
 
 .container {
-  width: 500px; 
+  width: 500px;
+  height: 650px;
   margin: 0 auto;
 }
 
@@ -24,4 +25,4 @@ ul {
   right:2%; 
   text-align: right; 
 }
-.text_info { position:fixed; bottom: 2%; left: 2%;}
+.text_info { font-size: 2em; text-align: center; margin: 0 auto;}
